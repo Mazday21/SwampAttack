@@ -18,6 +18,7 @@ public class EnemyStateMachine : MonoBehaviour
     private void Start()
     {
         _target = GetComponent<Enemy>().Target;
+        Reset(_startState);
     }
 
     private void Update()
@@ -26,10 +27,9 @@ public class EnemyStateMachine : MonoBehaviour
             return;
 
         var nextState = _currentState.GetNextState();
+        
         if (nextState != null)
-        {
             Transit(nextState);
-        }
     }
 
     private void Transit(State nextState)
@@ -37,19 +37,17 @@ public class EnemyStateMachine : MonoBehaviour
         if (_currentState != null)
         {
             _currentState.Exit();
-
             _currentState = nextState;
 
             if (_currentState != null)
-            {
                 _currentState.Enter(_target);
-            }
         }
     }
 
     private void Reset(State start)
     {
         _currentState = start;
+        
         if(_currentState != null)
             _currentState.Enter(_target);
     }

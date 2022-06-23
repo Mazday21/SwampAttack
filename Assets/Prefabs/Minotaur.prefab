@@ -13,6 +13,12 @@ GameObject:
   - component: {fileID: 5701981379098157758}
   - component: {fileID: 6555368152611267334}
   - component: {fileID: 660233793548916560}
+  - component: {fileID: 921943625613744851}
+  - component: {fileID: 1271065643521769585}
+  - component: {fileID: 6054412594175560017}
+  - component: {fileID: 9156817246780415392}
+  - component: {fileID: 9023545548354847409}
+  - component: {fileID: 3829607642605221289}
   m_Layer: 0
   m_Name: Minotaur
   m_TagString: Untagged
@@ -75,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1906606725, guid: ccbee0f25d3611143af4a48df6157c1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,9 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a7b88216b23941959f54cd94f51a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 0
-  _reward: 0
-  _target: {fileID: 0}
+  _health: 1
+  _reward: 10
 --- !u!61 &660233793548916560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,3 +153,88 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5122509, y: 2.0500002}
   m_EdgeRadius: 0
+--- !u!114 &921943625613744851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701981379098157757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f68c338f83ccc3e44a0e2a2274973be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startState: {fileID: 1271065643521769585}
+--- !u!114 &1271065643521769585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701981379098157757}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bcc05be44e5f6844a0f9ef75e8aa099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitions:
+  - {fileID: 6054412594175560017}
+  _speed: 2
+--- !u!114 &6054412594175560017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701981379098157757}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff942e06ddb8d146be5615311971850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 9156817246780415392}
+  _transitionRange: 1.5
+  _rangeSpread: 0.5
+--- !u!114 &9156817246780415392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701981379098157757}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6f2705b8f11074a9f7fd008c296d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitions:
+  - {fileID: 9023545548354847409}
+  _damage: 1
+  _delay: 2
+--- !u!114 &9023545548354847409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701981379098157757}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5e20335254e084eae6386a642851bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 3829607642605221289}
+--- !u!114 &3829607642605221289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701981379098157757}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c83f1d9b53ff4489b71b0f1a2f4a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitions: []

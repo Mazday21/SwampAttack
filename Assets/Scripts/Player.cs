@@ -30,7 +30,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void OnEnemyDied(int reward)
+    public void ApplyDamage(int damage)
+    {
+        _currentHealth -= damage;
+
+        if (_currentHealth <= 0)
+        {
+            _animator.SetBool("die", true);
+            Destroy(gameObject, 1);
+        }
+    }
+
+    public void AddReward(int reward)
     {
         Money += reward;
     }

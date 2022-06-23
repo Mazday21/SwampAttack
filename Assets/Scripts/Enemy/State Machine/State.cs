@@ -28,13 +28,12 @@ public abstract class State : MonoBehaviour
 
     public void Exit()
     {
-        if (enabled == true)
+        if (enabled)
         {
             foreach (var transition in _transitions)
             {
                 transition.enabled = false;
             }
-
             enabled = false;
         }
     }
@@ -44,11 +43,8 @@ public abstract class State : MonoBehaviour
         foreach (var transition in _transitions)
         {
             if (transition.NeedTransit)
-            {
                 return transition.TargetState;
-            }
         }
-
         return null;
     }
 }
