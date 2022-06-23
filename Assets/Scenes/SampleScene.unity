@@ -583,6 +583,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &669151685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 858587394156362660, guid: 1aea2e43ea323914e9981a6784c357b9, type: 3}
+  m_PrefabInstance: {fileID: 858587394480592930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce79482970dc8e4f9a3b9c9145d6b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1024595651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,5 +2030,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minotaur
       objectReference: {fileID: 0}
+    - target: {fileID: 6555368152611267334, guid: da0e02059f131a44c9d6fca43d5b975a, type: 3}
+      propertyPath: _health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555368152611267334, guid: da0e02059f131a44c9d6fca43d5b975a, type: 3}
+      propertyPath: _reward
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555368152611267334, guid: da0e02059f131a44c9d6fca43d5b975a, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 669151685}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da0e02059f131a44c9d6fca43d5b975a, type: 3}

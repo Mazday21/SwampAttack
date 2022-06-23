@@ -9,19 +9,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1335504068059604976, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
       propertyPath: m_Name
-      value: Shotgun Bullet
+      value: Shotgun Bullet Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1386891227376242760, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1386891227376242760, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0069
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386891227376242760, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2315
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386891227376242760, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3849542
+      value: -2.1657
       objectReference: {fileID: 0}
     - target: {fileID: 1386891227376242760, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8401268
+      value: -3.0885
       objectReference: {fileID: 0}
     - target: {fileID: 1386891227376242760, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62,6 +70,14 @@ PrefabInstance:
     - target: {fileID: 2106030203513787184, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
       propertyPath: _damage
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363338290760030334, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
+      propertyPath: m_Size.y
+      value: 0.06868863
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363338290760030334, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.00000035762787
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1d5e391b3af7ee4699326c644e01f02, type: 3}
