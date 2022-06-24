@@ -15,9 +15,12 @@ public class Spawner : MonoBehaviour
     private int _currentWaveNumber = 0;
     private float _timeLastSpawn;
     private int _spawned;
+    private int _died;
+    private int _enemiesInWave;
 
     public event UnityAction AllEnemySpawned;
-    
+    public event UnityAction<int, int> EnemyCountChanged;
+
     private void Start()
     {
         SetWave(_currentWaveNumber);
@@ -58,19 +61,25 @@ public class Spawner : MonoBehaviour
     private void SetWave(int index)
     {
         _currentWave = _waves[index];
+        _enemiesInWave = _currentWave.Count;
     }
 
     public void NextWave()
     {
         SetWave(++_currentWaveNumber);
         _spawned = 0;
+        _died = 0;
+        EnemyCountChanged?.Invoke(_died, _enemiesInWave);
     }
 
     private void OnEnemyDying(Enemy enemy)
     {
+        _died++;
         enemy.Dying -= OnEnemyDying;
         
         _target.AddReward(enemy.Reward);
+        
+        EnemyCountChanged?.Invoke(_died, _enemiesInWave);
     }
 }
 
