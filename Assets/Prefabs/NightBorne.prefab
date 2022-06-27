@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 4483605718084567707}
   _transitionRange: 1
-  _rangeSpread: 1
+  _rangeSpread: 0.5
 --- !u!114 &4483605718084567707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,8 +227,8 @@ MonoBehaviour:
   _transitions:
   - {fileID: 4855202016787021150}
   - {fileID: 2312966957471488298}
-  _damage: 5
-  _delay: 3
+  _damage: 10
+  _delay: 2
 --- !u!114 &9097576837534988662
 MonoBehaviour:
   m_ObjectHideFlags: 0

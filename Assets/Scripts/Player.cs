@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.touchCount > 0)
         {
             _animator.SetTrigger("shoot");
             _currentWeapon.Shoot(_shootPoint);
